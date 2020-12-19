@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Tree_Category</title>
+ <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+  <style>
+    .tree{
+      color:#393939;
+    }
+    .tree, .tree ul{
+      list-style: none;
+      padding-left:17px;
+    }
+    .tree *:before{
+      width:30px;
+      height:30px;
+      display:inline-block;
+    }
+    .tree label{
+      cursor: pointer;
+    }
+    .tree label:before{
+      content:'\f13e';
+      font-family: fontello;
+    }
+    .tree a{
+      text-decoration: none;
+      color:#393939;
+    }
+    .tree a:before{
+      content:'\e802';
+      font-family: fontello;
+    }
+    .tree input[type="checkbox"] {
+      display: none;
+    }
+    .tree input[type="checkbox"]:checked~ul {
+      display: none;
+    }
+    .tree input[type="checkbox"]:checked+label:before{
+      content:'\e803';
+      font-family: fontello;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="tree">
+    <li>
+      <input type="checkbox" id="root">
+      <label for="root">명 지 대 학 교</label>
+      <ul>
+        <li><a href="http://www.mju.ac.kr/mjukr/index.do">대학홈페이지</a></li>
+        <li><a href="http://iphak.mju.ac.kr/main/index.php">입학처 홈페이지</a></li>
+        <li><a href="http://ipp.mju.ac.kr/common/common.do?jsp_path=index">IPP 사업단</a></li>
+        <li>------------------------------------------------------------------------- </li>
+        <li>
+          <input type="checkbox" id="node1">
+          <label for="node1">개인 학사 정보</label>
+          <ul>
+            <li><a href="http://myiweb.mju.ac.kr/servlet/main1">MyIWeb</a></li>
+            <li><a href="http://home.mju.ac.kr/course/courseList.action?command=main&tab=course">E-CLASS</a></li>
+            <li><a href="http://lms.mju.ac.kr/ilos/main/main_form.acl">LMS</a></li>
+          </ul>
+        </li>
+      </ul>
+      <li>---------------------------------------------------------------------------- </li>
+      <li>
+        <input type="checkbox" id="node2">
+        <label for="node2">코딩학습 사이트</label>
+        <ul>
+          <li><a href="https://opentutorials.org/">생활코딩</a></li>
+          <li><a href="https://www.acmicpc.net/">BAEKJOON</a></li>
+          <li><a href="https://dojang.io/">코딩도장</a></li>
+        </ul>
+      </li>
+    </li>
+  </ul>
+
+</body>
+
+</html>
