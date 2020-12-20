@@ -13,6 +13,5 @@ var app = http.createServer(function(request,response){
     response.writeHead(200);
     console.log(__dirname + url); /*페이지 방문기록을 나타내줌*/
     response.end(fs.readFileSync(__dirname + url));
-
 });
 app.listen(3000);
